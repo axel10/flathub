@@ -17,6 +17,11 @@ finish-args:
   - --filesystem=xdg-music
   - --talk-name=org.mpris.MediaPlayer2.Player
   - --talk-name=org.freedesktop.Notifications
+  - --talk-name=org.kde.StatusNotifierWatcher
+  - --talk-name=org.freedesktop.StatusNotifierWatcher
+  - --own-name=org.kde.StatusNotifierItem.*
+  - --own-name=org.freedesktop.StatusNotifierItem.*
+  - --own-name=org.fluttertray.*
 
 modules:
   - name: rust-env
@@ -58,8 +63,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/axel10/vynody.git
-        tag: 1.8.4
-        commit: 5a77d67c1b5f624d053ec48682c288afc122073d
+        tag: 1.9.1
+        commit: 3fddbf4e98aa2073a839dd48ec2faa4e01006919
       - type: file
         url: https://github.com/axel10/audio_core/releases/download/0.6/ffmpeg_lib_linux.tar.gz
         sha256: 256593a6acaf54b6e0252aae96051246a0d400bc673cf02e32fafd2d24880d6c
