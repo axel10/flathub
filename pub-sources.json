@@ -3139,7 +3139,7 @@
         ],
         "url": "https://sqlite.org/2026/sqlite-autoconf-3520000.tar.gz",
         "sha256": "f6b50b0c103392af32a8be15b2b9d25959de9a00a70c3979128aafeaa5338b3f",
-        "dest": "$APP/build/linux/x64/release/_deps/sqlite3-subbuild/sqlite3-populate-prefix/src"
+        "dest": "build/linux/x64/release/_deps/sqlite3-subbuild/sqlite3-populate-prefix/src"
     },
     {
         "type": "file",
@@ -3148,7 +3148,7 @@
         ],
         "url": "https://sqlite.org/2026/sqlite-autoconf-3520000.tar.gz",
         "sha256": "f6b50b0c103392af32a8be15b2b9d25959de9a00a70c3979128aafeaa5338b3f",
-        "dest": "$APP/build/linux/arm64/release/_deps/sqlite3-subbuild/sqlite3-populate-prefix/src"
+        "dest": "build/linux/arm64/release/_deps/sqlite3-subbuild/sqlite3-populate-prefix/src"
     },
     {
         "type": "patch",
