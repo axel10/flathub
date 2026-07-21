@@ -1,0 +1,9 @@
+diff --git a/linux/tray_impl_linux.cc b/linux/tray_impl_linux.cc
+index 6cb2451..a3b9845 100644
+--- a/linux/tray_impl_linux.cc
++++ b/linux/tray_impl_linux.cc
+@@ -159,3 +159,3 @@ bool TrayImplLinux::Init(const std::string& icon_path,
+   bus_id_counter_++;
+   g_free(bus_name_);
+-  bus_name_ = g_strdup_printf("org.fluttertray.FlutterTray%d", bus_id_counter_);
++  bus_name_ = g_strdup_printf("io.github.axel10.vynody.FlutterTray%d", bus_id_counter_);

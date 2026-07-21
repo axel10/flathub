@@ -10,7 +10,7 @@ rename-icon: io.github.axel10.vynody
 
 finish-args:
   - --share=ipc
-  - --socket=x11
+  - --socket=fallback-x11
   - --socket=wayland
   - --device=dri
   - --socket=pulseaudio
@@ -20,9 +20,6 @@ finish-args:
   - --talk-name=org.freedesktop.Notifications
   - --talk-name=org.kde.StatusNotifierWatcher
   - --talk-name=org.freedesktop.StatusNotifierWatcher
-  - --own-name=org.kde.StatusNotifierItem.*
-  - --own-name=org.freedesktop.StatusNotifierItem.*
-  - --own-name=org.fluttertray.*
 
 modules:
   - name: rust-env
@@ -111,7 +108,6 @@ modules:
           esac
       - type: git
         url: https://github.com/axel10/vynody.git
-        branch: main
         commit: 9b7c1ca4587f26fe7b047d2519b3d8181a1e0738
       - type: file
         url: https://github.com/axel10/audio_core/releases/download/0.6/ffmpeg_lib_linux.tar.gz
@@ -158,6 +154,9 @@ modules:
       - type: git
         url: https://github.com/axel10/flutter_tray
         commit: 2a28c0e28ea023bfe7fb361175b686b286e63512
+        dest: .pub-cache/git/flutter_tray-2a28c0e28ea023bfe7fb361175b686b286e63512
+      - type: patch
+        path: patches/flutter_tray/change_dbus_name.patch
         dest: .pub-cache/git/flutter_tray-2a28c0e28ea023bfe7fb361175b686b286e63512
       - type: git
         url: https://github.com/axel10/linux_directory_access
